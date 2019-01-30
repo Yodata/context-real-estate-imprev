@@ -1,0 +1,69 @@
+{
+  "name": "@yodata/context-real-estate-imprev",
+  "version": "0.0.1",
+  "description": "data transformations for @yodata/context-real-estate -> Imprev",
+  "keywords": [
+    "real-estate",
+    "yodata",
+    "context",
+    "json-ld"
+  ],
+  "author": "yodaveduran <dave@yodata.io> (https://yodata.io/)",
+  "homepage": "https://github.com/Yodata/yodata#readme",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": {
+    "imprev": "bin/imprev"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yodata/context-real-estate-imprev.git"
+  },
+  "scripts": {
+    "test": "xo & jest",
+    "commit": "npx git-cz"
+  },
+  "bugs": {
+    "url": "https://github.com/Yodata/yodata/issues"
+  },
+  "dependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/fs-extra": "^5.0.4",
+    "@types/inquirer": "0.0.43",
+    "@types/jsonata": "^1.3.0",
+    "@yodata/transform": "^0.2.10",
+    "@yodata/transform-plugin-view": "^0.0.5",
+    "ajv-keywords": "^3.2.0",
+    "commander": "^2.19.0",
+    "fs-extra": "^7.0.1",
+    "inquirer": "^6.2.1",
+    "jsonata": "^1.6.4"
+  },
+  "devDependencies": {
+    "@types/ajv": "^1.0.0",
+    "ajv": "^6.7.0",
+    "eslint-plugin-jest": "^22.1.3",
+    "jest": "^24.0.0",
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "plugin": "jest",
+    "fix": true,
+    "envs": [
+      "node",
+      "jest/globals"
+    ]
+  }
+}
