@@ -6,17 +6,17 @@
 
 `$ git clone yodata/context-real-estate-imprev`
 
-`$ yarn`
+`$ npm install`
 
 ## Test
 
-`$ yarn test`
+`$ npm test`
 
 ## CLI
 
 Make sure the binary is linked...
 
-`$ yarn link`
+`$ npm link`
 
 Then you can use
 
