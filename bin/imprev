@@ -1,18 +1,26 @@
 #!/usr/bin/env node
+const createView = require('../lib')
+const {getData} = require('../lib/solid-client')
 
-const program = require('commander')
-const Path = require('path')
-const fs = require('fs-extra')
-const transform = require('../lib')
-
-program
-    .version('1')
-    .command('transform <filepath>')
-    .action(function (filepath) {
-        const path = Path.resolve(process.cwd(),filepath)
-        const data = fs.readJSONSync(path)
-        const result = transform(data)
-        console.log(result)
-    })
-
-program.parse(process.argv)
+require('yargs')
+    .wrap(96)
+    .options('show-input', {alias: 'i', type: 'boolean'})
+    .command(
+        'transform <hsfid>', 
+        'RealEstateAgent => ExternalUser',
+        {},
+        async function({hsfid, showInput}) {
+            const id = String(hsfid)
+            const input = await getData(id)
+            const output = createView(input)
+            if (showInput) {
+                console.log({input})
+            }
+            console.log('\n--- RESULT ---\n')
+            console.log(output)
+        }
+    )	
+	.demandCommand()
+	.help()
+    .argv
+    
