@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const createView = require('../lib')
+const transform = require('..')
 const {getData} = require('../lib/solid-client')
 
 require('yargs')
@@ -12,11 +12,10 @@ require('yargs')
         async function({hsfid, showInput}) {
             const id = String(hsfid)
             const input = await getData(id)
-            const output = createView(input)
+            const output = transform(input)
             if (showInput) {
                 console.log({input})
             }
-            console.log('\n--- RESULT ---\n')
             console.log(output)
         }
     )	

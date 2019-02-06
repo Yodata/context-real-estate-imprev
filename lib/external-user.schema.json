@@ -1,4 +1,4 @@
-module.exports = {
+{
 	"$schema": "http://json-schema.org/draft-07/schema",
 	"$comment": "https://imprev.dev.yodata.io/public/context-real-estate-imprev/schema",
 	"type": "object",
@@ -15,10 +15,16 @@ module.exports = {
 			"example": "yodata-real-living"
 		},
 		"meta": {
-			"type": "array"
+			"type": "array",
+			"item": {
+				"type": "object"
+			}
 		},
 		"metaOrgKeys": {
-			"type": "object"
+			"type": "array",
+			"item": {
+				"type": "string"
+			}
 		},
 		"orgLabel": {
 			"type": "string"
@@ -32,10 +38,10 @@ module.exports = {
 			]
 		},
 		"localLanguage": {
-			"type": "array"
-		},
-		"item": {
-			"type": "string"
+			"type": "array",
+			"item": {
+				"type": "string"
+			}
 		},
 		"localCountry": {
 			"type": "string"

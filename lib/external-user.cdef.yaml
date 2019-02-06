@@ -1,19 +1,19 @@
-const jsonata = require('jsonata')
-const src = `{ 
+'@view': >
+  { 
     "externalUserId": id,
     "source": 'yodata-real-living',
     "meta": $spread(additionalProperty),
     "metaOrgKeys": identifier.*,
-    "orgLabel": null,
-    "status": additionalProperty.Status,
-    "localLanguage": availableLanguage[0].name,
+    "orgLabel": "",
+    "status": (additionalProperty.Status = 'Active' ? 'ACTIVE' : 'DISABLED'),
+    "localLanguage": availableLanguage[0].name[],
     "localCountry": address[country][0].country,
-    "email": **.email,
+    "email": (**.email),
     "firstName": givenName,
     "middleInitial": null,
     "lastName": familyName,
     "street1": $join(address[0].streetAddress,', '),
-    "street2": null,
+    "street2": '',
     "city": address[0].addressLocality,
     "state": address[0].addressRegion,
     "country": address[0].addressCountry,
@@ -38,7 +38,4 @@ const src = `{
     "facebookUrl": url[$contains("facebook")],
     "twitterUrl": url[$contains("twitter")],
     "linkedInUrl": url[$contains("linkedin")]
-}`
-const expression = jsonata(src)
-
-module.exports = data => expression.evaluate(data)
+    }
