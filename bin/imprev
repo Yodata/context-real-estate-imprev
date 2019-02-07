@@ -1,25 +1,34 @@
 #!/usr/bin/env node
+
 const transform = require('..')
-const {getData} = require('../lib/solid-client')
+const {
+    getData
+} = require('../lib/solid-client')
 
 require('yargs')
     .wrap(96)
-    .options('show-input', {alias: 'i', type: 'boolean'})
+    .options('show-input', {
+        alias: 'i',
+        type: 'boolean'
+    })
     .command(
-        'transform <hsfid>', 
-        'RealEstateAgent => ExternalUser',
-        {},
-        async function({hsfid, showInput}) {
+        'transform <hsfid>',
+        'RealEstateAgent => ExternalUser', {},
+        async function ({
+            hsfid,
+            showInput
+        }) {
             const id = String(hsfid)
             const input = await getData(id)
             const output = transform(input)
             if (showInput) {
-                console.log({input})
+                console.log({
+                    input
+                })
             }
-            console.log(output)
+            console.log(JSON.stringify(output, null, 4))
         }
-    )	
-	.demandCommand()
-	.help()
+    )
+    .demandCommand()
+    .help()
     .argv
-    
