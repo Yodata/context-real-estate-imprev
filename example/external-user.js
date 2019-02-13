@@ -1,8 +1,25 @@
 const externalUser = {
-	externalUserId: 'https://batman.example.com/profile/card#me',
+	externalUserId: '12345',
 	source: 'source',
-	meta: 'meta',
-	metaOrgKeys: 'metaOrgKeys',
+	meta: [
+		{
+			name: 'AffiliateID',
+			value: 'AffiliateID'
+		},
+		{
+			name: 'OfficeID',
+			value: 'OfficeID'
+		},
+		{
+			name: 'ContactID',
+			value: '12345'
+		}
+	],
+	metaOrgKeys: [
+		'AffiliateID',
+		'OfficeID',
+		'ContactID'
+	],
 	orgLabel: 'orgLabel',
 	status: 'additionalProperty.Status',
 	localLanguage: 'availableLanguage.0.name',
