@@ -1,0 +1,90 @@
+{
+  "type": "RealEstateAgent",
+  "id": "https://3000034.rl.hsfaffiliates.com/profile/card#me",
+  "additionalProperty": {
+    "UserType": "Full Time Sales Professional",
+    "OfficeDBA": "Real Living Greater Montana",
+    "AffiliateID": "MT201",
+    "OfficeStatus": "Active",
+    "Status": "Active",
+    "BrokerID": "MT201",
+    "OfficeID": "MT201-001"
+  },
+  "certification": [],
+  "contactPoint": {
+    "type": "ContactPoint",
+    "name": "MobilePhone",
+    "value": "(406) 369-1047"
+  },
+  "email": "sheri@greatermontanare.com",
+  "familyName": "Jones",
+  "faxNumber": "(406) 545-2203",
+  "givenName": "Sheri",
+  "identifier": {
+    "PersonPREAID": "3000034",
+    "PersonMLSID": 0,
+    "ContactID": "3000034"
+  },
+  "memberOf": [
+    {
+      "type": "MLSMembership",
+      "roleName": "MLSMember",
+      "memberOf": {
+        "type": "MultipleListingService",
+        "name": "MT-MTNMAOR"
+      },
+      "memberId": "20160111120702879020000000"
+    },
+    {
+      "type": "OrganizationRole",
+      "roleName": "Awards Coordinator",
+      "memberOf": {
+        "type": "RealEstateOrganization",
+        "id": "https://MT201.rl.hsfaffiliates.com/profile/card#me"
+      }
+    },
+    {
+      "type": "OrganizationRole",
+      "roleName": "Broker of Record",
+      "memberOf": {
+        "type": "RealEstateOrganization",
+        "id": "https://MT201.rl.hsfaffiliates.com/profile/card#me"
+      }
+    },
+    {
+      "type": "OrganizationRole",
+      "roleName": "Owner",
+      "memberOf": {
+        "type": "RealEstateOrganization",
+        "id": "https://MT201.rl.hsfaffiliates.com/profile/card#me"
+      }
+    },
+    {
+      "type": "OrganizationRole",
+      "roleName": "Roster Manager",
+      "memberOf": {
+        "type": "RealEstateOrganization",
+        "id": "https://MT201.rl.hsfaffiliates.com/profile/card#me"
+      }
+    },
+    {
+      "type": "OrganizationRole",
+      "roleName": "Affiliate Manager",
+      "memberOf": {
+        "type": "RealEstateOrganization",
+        "id": "https://MT201.rl.hsfaffiliates.com/profile/card#me"
+      }
+    },
+    {
+      "type": "OrganizationRole",
+      "roleName": "Office Manager",
+      "memberOf": {
+        "type": "RealEstateOffice",
+        "id": "https://MT201-001.rl.hsfaffiliates.com/profile/card#me"
+      }
+    }
+  ],
+  "name": "Sheri Jones",
+  "parentOrganization": "https://MT201-001.rl.hsfaffiliates.com/profile/card#me",
+  "telephone": "(406) 642-3054"
+}

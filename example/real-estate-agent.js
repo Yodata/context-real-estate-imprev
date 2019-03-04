@@ -1,5 +1,16 @@
 module.exports = {
 	type: 'RealEstateAgent',
+	name: 'agent_Name',
+	telephone: 'agent_telephone',
+	email: 'agent_email',
+	address: {
+		type: "PostalAddress",
+		streetAddress: "streetAddress",
+		postOfficeBoxNumber: "postOfficeBoxNumber",
+		addressRegion: "state",
+		addressLocality: "city",
+		postalCode: "postalCode"
+	},
 	availableLanguage: [
 		{
 			type: 'Language',
@@ -10,29 +21,31 @@ module.exports = {
 	memberOf: [
 		{
 			type: 'MLSMembership',
-			identifier: 'bruce.wayne',
+			memberId: 'memberId',
 			memberOf: {
 				type: 'MultipleListingService',
-				name: 'Gotham City MLS'
+				name: 'mls_name'
 			}
 		},
 		{
 			type: 'OrganizationRole',
-			roleName: 'Relocation Specialist',
+			roleName: 'role_name',
 			memberOf: 'https://AccountID.ds.bhhsresource.com/profile/card#me'
 		}
 	],
 	contactPoint: [
 		{
 			type: 'ContactPoint',
-			name: 'Office Phone',
-			telephone: '820-549-9959',
-			email: 'batman@example.com',
-			faxNumber: '1-704-912-7169'
+			name: 'contact_point_1',
+			telephone: 'contact_point_1_telephone',
+		},
+		{
+			type: 'ContactPoint',
+			name: 'contact_point_2',
+			email: 'contact_point_2_email'
 		}
 	],
-	name: 'OfficePhone',
-	telephone: '867-5309',
+	
 	certification: [
 		{
 			type: 'Certification',
@@ -70,6 +83,11 @@ module.exports = {
 		BrokerID: 'BrokerID',
 		OfficeStatus: 'OfficeStatus',
 		Status: 'Status',
-		UserType: 'Full Time Sales Professional'
-	}
+		UserType: 'Full Time Sales Professional',
+	},
+	url: [
+		'https://www.facebook.com/yodaveduran',
+		'https://www.linkedin.com/in/daveduran/',
+		'https://twitter.com/@RealDonaldTrump'
+	]
 };
